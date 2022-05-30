@@ -26,17 +26,23 @@ const fetchGuildStickers = async (guildId: string): Promise<APISticker[]> => {
 }
 
 const convertEmoji = (emoji: APIEmoji): string => {
-  const url = `https://cdn.discordapp.com/emojis/${emoji.id}.${emoji.animated ? 'gif' : 'webp'}?quality=lossless`
+  const url = `https://cdn.discordapp.com/emojis/${emoji.id}.${
+    emoji.animated ? 'gif' : 'webp'
+  }?quality=lossless`
   const body = `[${url}]\n\n#DiscordEmoji\n`
-  
-  return `https://scrapbox.io/${env.SCRAPBOX_PROJECT_NAME}/${encodeURIComponent(emoji.name!)}?body=${encodeURIComponent(body)}`
+
+  return `https://scrapbox.io/${env.SCRAPBOX_PROJECT_NAME}/${encodeURIComponent(
+    emoji.name!
+  )}?body=${encodeURIComponent(body)}`
 }
 
 const convertSticker = (sticker: APISticker): string => {
   const url = `https://media.discordapp.net/stickers/${sticker.id}.webp?size=160`
   const body = `[${url}]\n\n#DiscordSticker\n`
-  
-  return `https://scrapbox.io/${env.SCRAPBOX_PROJECT_NAME}/${encodeURIComponent(sticker.name)}?body=${encodeURIComponent(body)}`
+
+  return `https://scrapbox.io/${env.SCRAPBOX_PROJECT_NAME}/${encodeURIComponent(
+    sticker.name
+  )}?body=${encodeURIComponent(body)}`
 }
 
 const openScrapboxUrl = async (url: string) => {
@@ -46,8 +52,8 @@ const openScrapboxUrl = async (url: string) => {
 
 if (env.SYNC_EMOJIS) {
   fetchGuildEmojis(env.DISCORD_GUILD_ID)
-    .then(emojis => emojis.map(convertEmoji))
-    .then(urls => {
+    .then((emojis) => emojis.map(convertEmoji))
+    .then((urls) => {
       for (const url of urls) {
         openScrapboxUrl(url).then(() => console.log(url))
       }
@@ -56,8 +62,8 @@ if (env.SYNC_EMOJIS) {
 
 if (env.SYNC_STICKERS) {
   fetchGuildStickers(env.DISCORD_GUILD_ID)
-    .then(stickers => stickers.map(convertSticker))
-    .then(urls => {
+    .then((stickers) => stickers.map(convertSticker))
+    .then((urls) => {
       for (const url of urls) {
         openScrapboxUrl(url).then(() => console.log(url))
       }

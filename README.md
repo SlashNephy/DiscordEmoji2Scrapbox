@@ -14,6 +14,7 @@ Discord サーバーに登録されている絵文字を Scrapbox に追加す�
 - ページタイトル
   - 絵文字の名前 (e.g. `jager`)
 - 本文
+
   ```
   [https://cdn.discordapp.com/emojis/716242541460062332.png]
 
