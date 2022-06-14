@@ -1,19 +1,12 @@
-import { REST } from '@discordjs/rest'
-import { APIEmoji, APISticker, Routes } from 'discord-api-types/v10'
 import { exec } from 'child_process'
 import { setTimeout } from 'timers/promises'
-import dotenv from 'dotenv'
 
-dotenv.config()
-const env = process.env as {
-  DISCORD_TOKEN: string
-  DISCORD_GUILD_ID: string
-  SCRAPBOX_PROJECT_NAME: string
-  SYNC_EMOJIS?: string
-  SYNC_STICKERS?: string
-}
+import { Routes } from 'discord-api-types/v10'
 
-const rest = new REST({ version: '10' }).setToken(env.DISCORD_TOKEN)
+import { rest } from './lib/discord'
+import { env } from './lib/env'
+
+import type { APIEmoji, APISticker } from 'discord-api-types/v10'
 
 const fetchGuildEmojis = async (guildId: string): Promise<APIEmoji[]> => {
   const emojis = await rest.get(Routes.guildEmojis(guildId))
@@ -47,25 +40,25 @@ const convertSticker = (sticker: APISticker): string => {
 
 const openScrapboxUrl = async (url: string) => {
   await setTimeout(100)
-  await exec(`open ${url}`)
+  exec(`open ${url}`)
 }
 
 if (env.SYNC_EMOJIS) {
-  fetchGuildEmojis(env.DISCORD_GUILD_ID)
+  void fetchGuildEmojis(env.DISCORD_GUILD_ID)
     .then((emojis) => emojis.map(convertEmoji))
-    .then((urls) => {
+    .then(async (urls) => {
       for (const url of urls) {
-        openScrapboxUrl(url).then(() => console.log(url))
+        await openScrapboxUrl(url).then(() => console.log(url))
       }
     })
 }
 
 if (env.SYNC_STICKERS) {
-  fetchGuildStickers(env.DISCORD_GUILD_ID)
+  void fetchGuildStickers(env.DISCORD_GUILD_ID)
     .then((stickers) => stickers.map(convertSticker))
-    .then((urls) => {
+    .then(async (urls) => {
       for (const url of urls) {
-        openScrapboxUrl(url).then(() => console.log(url))
+        await openScrapboxUrl(url).then(() => console.log(url))
       }
     })
 }
