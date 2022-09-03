@@ -16,7 +16,7 @@
     "@discordjs/rest": "0.6.0",
     "@slashnephy/typescript-extension": "0.2.3",
     "discord-api-types": "0.37.5",
-    "dotenv": "16.0.1"
+    "dotenv": "16.0.2"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.1.14",
