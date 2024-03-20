@@ -22,7 +22,7 @@
     "@slashnephy/eslint-config": "2.3.32",
     "@slashnephy/prettier-config": "1.0.73",
     "@types/node": "20.11.28",
-    "@types/prettier": "2.7.3",
+    "@types/prettier": "3.0.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
     "prettier": "3.2.5",
