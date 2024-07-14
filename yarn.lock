@@ -4438,9 +4438,9 @@ __metadata:
   linkType: hard
 
 "peek-readable@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "peek-readable@npm:5.1.1"
-  checksum: 77ca3e7dbd6078d475895a92df07bc60655e46918f2e46d6370dfa136ad06f2cdb70bcb7b59defb5adf47d7f1a667e95075b3a0d2cc23e192392dfcb49904120
+  version: 5.1.2
+  resolution: "peek-readable@npm:5.1.2"
+  checksum: e56b1a391b60df05bdcac41927d77a53cc32924dc7c2d851ebece3388a2c2767dc7e02d6fcc1660a899903d3af28266358b173d2daff59f17a107e0779dbc92a
   languageName: node
   linkType: hard
 
