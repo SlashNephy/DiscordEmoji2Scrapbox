@@ -19,7 +19,7 @@
     "dotenv": "16.4.7"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "2.3.175",
+    "@slashnephy/eslint-config": "2.3.179",
     "@slashnephy/prettier-config": "1.0.73",
     "@types/node": "22.13.0",
     "@types/prettier": "3.0.0",
