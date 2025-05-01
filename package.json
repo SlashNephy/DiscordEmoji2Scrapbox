@@ -15,7 +15,7 @@
   "dependencies": {
     "@discordjs/rest": "0.6.0",
     "@slashnephy/typescript-extension": "0.2.3",
-    "discord-api-types": "0.38.1",
+    "discord-api-types": "0.38.2",
     "dotenv": "16.5.0"
   },
   "devDependencies": {
