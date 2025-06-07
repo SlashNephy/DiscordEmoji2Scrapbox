@@ -2282,10 +2282,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:0.38.8":
-  version: 0.38.8
-  resolution: "discord-api-types@npm:0.38.8"
-  checksum: d60fa5368d062c9dcec31d875ceda068c460a5bfa4860d3fe3c1d6833dbd8bcb3abf63f860f8e9b65fa98a1ae481114519981a64c177b609da7430b69aa8c4dc
+"discord-api-types@npm:0.38.11":
+  version: 0.38.11
+  resolution: "discord-api-types@npm:0.38.11"
+  checksum: 618815e38a9aa8b9d9260aec599248f9f02bb9c6fbf80ea347edd66b1197611af739daf11927eb91f395f51d0ef87dccb0d2dd42bea356a9892e07205e38c456
   languageName: node
   linkType: hard
 
@@ -2307,7 +2307,7 @@ __metadata:
     "@types/node": 22.15.29
     "@types/prettier": 3.0.0
     concurrently: 9.1.2
-    discord-api-types: 0.38.8
+    discord-api-types: 0.38.11
     dotenv: 16.5.0
     eslint: 8.57.1
     prettier: 3.5.3
