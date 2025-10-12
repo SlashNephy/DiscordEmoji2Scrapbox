@@ -998,12 +998,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.18.8":
-  version: 22.18.8
-  resolution: "@types/node@npm:22.18.8"
+"@types/node@npm:22.18.10":
+  version: 22.18.10
+  resolution: "@types/node@npm:22.18.10"
   dependencies:
     undici-types: ~6.21.0
-  checksum: b096c88c685bd9d092b494a01f12b5af3bd4b3046552c112113d1e65f2b60b42e68cd94c4036ddd1a4a6ea66e03d8639855e8d82484ac37a5787555fab696f82
+  checksum: 3c6e12b5b6cec219c5903f8318ced2c4a621c08aeec55908925d5ad14408b48e3d1578b5d920964a2485521764ddc1622ed7c2048a803bd2856e991f4c4f7813
   languageName: node
   linkType: hard
 
@@ -2344,7 +2344,7 @@ __metadata:
     "@slashnephy/eslint-config": 2.3.204
     "@slashnephy/prettier-config": 1.0.73
     "@slashnephy/typescript-extension": 0.2.3
-    "@types/node": 22.18.8
+    "@types/node": 22.18.10
     "@types/prettier": 3.0.0
     concurrently: 9.2.1
     discord-api-types: 0.38.29
