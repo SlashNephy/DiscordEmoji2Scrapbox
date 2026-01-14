@@ -13,7 +13,7 @@
     "format:prettier": "yarn lint:prettier --write"
   },
   "dependencies": {
-    "@discordjs/rest": "0.6.0",
+    "@discordjs/rest": "2.6.0",
     "@slashnephy/typescript-extension": "0.2.3",
     "discord-api-types": "0.38.37",
     "dotenv": "16.6.1"
